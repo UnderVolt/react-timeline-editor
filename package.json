@@ -1,5 +1,5 @@
 {
-  "name": "@xzdarcy/react-timeline-editor",
+  "name": "react-timeline-editor",
   "version": "0.1.9",
   "author": "xzdarcy",
   "license": "MIT",
@@ -14,10 +14,6 @@
     "url": "https://github.com/xzdarcy/react-timeline-editor/issues"
   },
   "homepage": "https://github.com/xzdarcy/react-timeline-editor#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xzdarcy/react-timeline-editor.git"
-  },
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
