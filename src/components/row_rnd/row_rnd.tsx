@@ -125,7 +125,7 @@ export const RowDnd = React.forwardRef<RowRndApi, RowRndProps>(
 
         // 控制bounds
         if (curLeft < bounds.left) curLeft = bounds.left;
-        else if (curLeft + preWidth > bounds.right) curLeft = bounds.right - preWidth;
+        // else if (curLeft + preWidth > bounds.right) curLeft = bounds.right - preWidth;
 
         if (onDrag) {
           const ret = onDrag(
