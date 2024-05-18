@@ -222,7 +222,7 @@ export const RowDnd = React.forwardRef<RowRndApi, RowRndProps>(
           // 控制bounds
           const tempRight = preLeft + preWidth;
           if (curLeft < bounds.left) curLeft = bounds.left;
-          const curWidth = Math.min(tempRight - curLeft, bounds.max);
+          const curWidth = bounds.max == -1 ? (tempRight - curLeft) : Math.min(tempRight - curLeft, bounds.max);
 
           if (onResize) {
             const ret = onResize('left', {
