@@ -1,0 +1,17 @@
+name: Build dist folder
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm i
+      - run: npm run build
+      - run: git add . && git commit -m "Building $GITHUB_SHA" && git push --force origin build
