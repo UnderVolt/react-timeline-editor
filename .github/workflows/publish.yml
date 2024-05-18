@@ -14,10 +14,15 @@ jobs:
           node-version: 16
       - run: npm i
       - run: npm run build      
+      - name: Declare some variables
+        shell: bash
+        run: |
+          echo "sha_short=$(git rev-parse --short "$GITHUB_SHA")" >> "$GITHUB_ENV"
+          echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> "$GITHUB_ENV"
       - run: git add .
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Build $GITHUB_SHA"
+          commit_message: "Build ${{ env.sha_short }}"
           branch: build
           create_branch: false
           skip_checkout: true
