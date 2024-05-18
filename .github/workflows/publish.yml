@@ -21,3 +21,4 @@ jobs:
           branch: build
           create_branch: false
           skip_checkout: true
+          commit_options: '--force'
