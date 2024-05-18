@@ -190,6 +190,7 @@ export const EditAction: FC<EditActionProps> = ({
       bounds={{
         left: leftLimit,
         right: rightLimit,
+        max: maxEnd
       }}
       edges={{
         left: !disableDrag && flexible && `.${prefix('action-left-stretch')}`,
